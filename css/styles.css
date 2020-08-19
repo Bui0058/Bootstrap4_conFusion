@@ -66,3 +66,10 @@ body{
     padding-left:16%;    
     text-align: left;    
 }
+
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
