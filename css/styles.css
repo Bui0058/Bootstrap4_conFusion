@@ -41,7 +41,7 @@ body {
   background: #512DA8; }
   .carousel .carousel-item {
     height: 300px; }
-    .carousel .carousel-item img {
+.carousel .carousel-item img {
       position: absolute;
       top: 0;
       left: 0;
@@ -61,8 +61,23 @@ body {
 .modal-header {
   background: #512DA8;
   color: floralwhite; }
-  .modal-header button {
+
+.modal-header button {
     color: floralwhite; }
 
 .modal-body {
   background: #D1C4E9; }
+
+  .map-container-5{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container-5 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }

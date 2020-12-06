@@ -8,9 +8,8 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Ristorante Con Fusion</title>
-	<!-- Bootstrap CSS -->
-	<!-- build:css css/main.css -->
+
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -23,21 +22,15 @@
       rel="stylesheet"
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
-	<link rel="stylesheet" href="css/styles.css" />
-	<!-- endbuild -->
-
-
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Ristorante Con Fusion</title>
   </head>
 
   <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
       <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#Navbar"
-        >
+        <button class="navbar-toggler" type="button" 
+             data-toggle="collapse" data-target="#Navbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand mr-auto" href="#"
@@ -228,14 +221,14 @@
                         <label class="btn btn-danger btn-sm ml-auto">
                           <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
                         </label>
-                      </div>
+                    </div>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-md-2 col-form-label">Date and Time</label>
                 <div class="col-md-10">
                   <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
                       <input
                         type="text"
                         class="form-control"
@@ -291,7 +284,7 @@
           </div>
           <div class="col-12 col-sm align-self-center">
             <div class="row align-items-center">
-              <div class="col-12 col-sm-6">
+              <div class="col-12 col-sm-6 mb-4 mb-md-0">
                 <img src="img/logo.png" class="img-fluid" />
               </div>
               <div class="col-12 col-sm">
@@ -466,12 +459,52 @@
         </div>
       </div>
     </footer>
-	<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-	<!-- build:js js/main.js -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="js/scripts.js"></script>
-    <!-- endbuild --
+    <script>
+      $(document).ready(function(){
+          $("#mycarousel").carousel( { interval: 2000 } );
+          $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                    $("#mycarousel").carousel('pause');
+                    $("#carouselButton").children("span").removeClass('fa-pause');
+                    $("#carouselButton").children("span").addClass('fa-play');
+                }
+                else if ($("#carouselButton").children("span").hasClass('fa-play')){
+                    $("#mycarousel").carousel('cycle');
+                    $("#carouselButton").children("span").removeClass('fa-play');
+                    $("#carouselButton").children("span").addClass('fa-pause');                    
+                }
+            });
+
+            // Code for assignment 4
+
+            // For reserveModal
+           $('#reserveButton').click(function() {
+                $("#reserveModal").modal("show");             
+            });
+            $("#cancelButton1").click(function () {
+                  $("#reserveModal").modal("hide");
+            });
+            $("#cancelButton2").click(function () {
+                  $("#reserveModal").modal("hide");
+            });
+
+            // For loginModal
+
+            $('#loginButton').click(function() {
+                $("#loginModal").modal("show");             
+            });
+            $("#cancelButton3").click(function () {
+                  $("#loginModal").modal("hide");
+            });
+            $("#cancelButton4").click(function () {
+                  $("#loginModal").modal("hide");
+            });
+      });
+  </script>
+
   </body>
 </html>
